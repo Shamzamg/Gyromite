@@ -49,25 +49,25 @@ public class AssetByParam {
     }
 
     private void loadIcons(){
-        icoProfessorRight = loadIcon("src/main/resources/assets/professor_right.png");
-        icoProfessorLeft = loadIcon("src/main/resources/assets/professor_left.png");
-        icoRope = loadIcon("src/main/resources/assets/rope.png");
-        icoWall = loadIcon("src/main/resources/assets/wall.png");
-        icoVoid = loadIcon("src/main/resources/assets/void.png");
-        icoDynamite = loadIcon("src/main/resources/assets/dynamite.png");
-        icoBlueColumnHead = loadIcon("src/main/resources/assets/column_head_blue.png");
-        icoBlueColumnBody = loadIcon("src/main/resources/assets/column_body_blue.png");
-        icoBlueColumnBottom = loadIcon("src/main/resources/assets/column_bottom_blue.png");
-        icoOrangeColumnHead = loadIcon("src/main/resources/assets/column_head_orange.png");
-        icoOrangeColumnBody = loadIcon("src/main/resources/assets/column_body_orange.png");
-        icoOrangeColumnBottom = loadIcon("src/main/resources/assets/column_bottom_orange.png");
+        icoProfessorRight = loadIcon("/assets/professor_right.png");
+        icoProfessorLeft = loadIcon("/assets/professor_left.png");
+        icoRope = loadIcon("/assets/rope.png");
+        icoWall = loadIcon("/assets/wall.png");
+        icoVoid = loadIcon("/assets/void.png");
+        icoDynamite = loadIcon("/assets/dynamite.png");
+        icoBlueColumnHead = loadIcon("/assets/column_head_blue.png");
+        icoBlueColumnBody = loadIcon("/assets/column_body_blue.png");
+        icoBlueColumnBottom = loadIcon("/assets/column_bottom_blue.png");
+        icoOrangeColumnHead = loadIcon("/assets/column_head_orange.png");
+        icoOrangeColumnBody = loadIcon("/assets/column_body_orange.png");
+        icoOrangeColumnBottom = loadIcon("/assets/column_bottom_orange.png");
     }
 
     private ImageIcon loadIcon(String url){
         BufferedImage image = null;
 
         try {
-            image = ImageIO.read(new File(url));
+            image = ImageIO.read(getClass().getResourceAsStream(url));
         } catch (IOException ex) {
             Logger.getLogger(ViewController.class.getName()).log(Level.SEVERE, null, ex);
             return null;

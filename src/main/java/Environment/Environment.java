@@ -11,10 +11,7 @@ import Utils.GameState;
 import Utils.Type;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
@@ -63,19 +60,13 @@ public class Environment {
 
         System.out.println("Current get level dimension: " + levelIndex);
 
-        ClassLoader classLoader = getClass().getClassLoader();
-
-        File level = null;
-        try {
-            level = new File(getClass().getResource("/maps/level"+levelIndex+".txt").toURI());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-
         int levelWidth = 0;
         int levelHeight = 0;
+
+        InputStream inputStream = getClass().getResourceAsStream("/maps/level"+levelIndex+".txt");
+
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(level));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             String line = null;
             int i=0;
             while((line = reader.readLine()) != null) {
@@ -151,17 +142,12 @@ public class Environment {
 
     public void loadLevel(int levelIndex){
 
-        File level = null;
-        try {
-            level = new File(getClass().getResource("/maps/level"+levelIndex+".txt").toURI());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-
         DirectionsControl.resetInstance();
 
+        InputStream inputStream = getClass().getResourceAsStream("/maps/level"+levelIndex+".txt");
+
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(level));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             String line = null;
             int i=0;
             while((line = reader.readLine()) != null) {
@@ -314,17 +300,11 @@ public class Environment {
     private void loadNextLevel(int nextlevel){
 
         //check if there is a next level, either way the game is finished
-        File level = null;
-        try {
-            if(getClass().getResource("/maps/level"+nextlevel+".txt") == null){
-                setGameState(GameState.FINISH);
-                return;
-            }
-            level = new File(getClass().getResource("/maps/level"+nextlevel+".txt").toURI());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
 
+        if(getClass().getResourceAsStream("/maps/level"+nextlevel+".txt") == null){
+            setGameState(GameState.FINISH);
+            return;
+        }
 
         //if there is a next level
 

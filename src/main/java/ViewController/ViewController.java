@@ -136,7 +136,7 @@ public class ViewController extends JFrame implements Observer {
         BufferedImage image = null;
 
         try {
-            image = ImageIO.read(new File(url));
+            image = ImageIO.read(getClass().getResourceAsStream(url));
         } catch (IOException ex) {
             Logger.getLogger(ViewController.class.getName()).log(Level.SEVERE, null, ex);
             return null;
@@ -147,38 +147,38 @@ public class ViewController extends JFrame implements Observer {
 
     public void placeHeaderBricks(int start, int stop){
         for(int i=start;i<stop;i++)
-            fenetre[0][i].setIcon(loadIcon("src/main/resources/assets/header_brick.png"));
+            fenetre[0][i].setIcon(loadIcon("/assets/header_brick.png"));
     }
 
     public void showScoreInHeader(){
-        fenetre[0][2].setIcon(loadIcon("src/main/resources/assets/score_s.png"));
-        fenetre[0][3].setIcon(loadIcon("src/main/resources/assets/score_c.png"));
-        fenetre[0][4].setIcon(loadIcon("src/main/resources/assets/score_separator.png"));
+        fenetre[0][2].setIcon(loadIcon("/assets/score_s.png"));
+        fenetre[0][3].setIcon(loadIcon("/assets/score_c.png"));
+        fenetre[0][4].setIcon(loadIcon("/assets/score_separator.png"));
 
         //calculate to show the score
         int score = env.getScore();
 
         for(int i=2; i>=0;i--){
             int numberToShow = (int) (score/Math.pow(10,i));
-            fenetre[0][7-i].setIcon(loadIcon("src/main/resources/assets/"+numberToShow+".png"));
+            fenetre[0][7-i].setIcon(loadIcon("/assets/"+numberToShow+".png"));
             score -= numberToShow*Math.pow(10,i);
         }
     }
 
     public void showTimeInHeader(){
-        fenetre[0][10].setIcon(loadIcon("src/main/resources/assets/time_t.png"));
-        fenetre[0][11].setIcon(loadIcon("src/main/resources/assets/time_i.png"));
-        fenetre[0][12].setIcon(loadIcon("src/main/resources/assets/time_m.png"));
-        fenetre[0][13].setIcon(loadIcon("src/main/resources/assets/time_e.png"));
+        fenetre[0][10].setIcon(loadIcon("/assets/time_t.png"));
+        fenetre[0][11].setIcon(loadIcon("/assets/time_i.png"));
+        fenetre[0][12].setIcon(loadIcon("/assets/time_m.png"));
+        fenetre[0][13].setIcon(loadIcon("/assets/time_e.png"));
 
-        fenetre[0][14].setIcon(loadIcon("src/main/resources/assets/header_brick.png"));
+        fenetre[0][14].setIcon(loadIcon("/assets/header_brick.png"));
 
         //calculate to show the time
         int timer = env.getTimer();
 
         for(int i=2; i>=0;i--){
             int numberToShow = (int) (timer/Math.pow(10,i));
-            fenetre[0][17-i].setIcon(loadIcon("src/main/resources/assets/"+numberToShow+".png"));
+            fenetre[0][17-i].setIcon(loadIcon("/assets/"+numberToShow+".png"));
             timer -= numberToShow*Math.pow(10,i);
         }
 
@@ -224,74 +224,74 @@ public class ViewController extends JFrame implements Observer {
     private void loadGameEndScreen() {
         for(int i=0;i<sizeX;i++){
             for(int j=0;j<sizeY; j++){
-                fenetre[0][j].setIcon(loadIcon("src/main/resources/assets/void.png"));
-                fenetre[1][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
+                fenetre[0][j].setIcon(loadIcon("/assets/void.png"));
+                fenetre[1][j].setIcon(loadIcon("/assets/wall.png"));
                 if(!(((j > 6) && (j < 13)) && ((i > 6) && (i < 9))))
-                    fenetre[i][j].setIcon(loadIcon("src/main/resources/assets/void.png"));
+                    fenetre[i][j].setIcon(loadIcon("/assets/void.png"));
                 if(j == 2)
-                    fenetre[i][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
+                    fenetre[i][j].setIcon(loadIcon("/assets/wall.png"));
                 if(j == sizeY - 3)
-                    fenetre[i][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
-                fenetre[sizeX-2][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
-                fenetre[sizeX-1][j].setIcon(loadIcon("src/main/resources/assets/void.png"));
+                    fenetre[i][j].setIcon(loadIcon("/assets/wall.png"));
+                fenetre[sizeX-2][j].setIcon(loadIcon("/assets/wall.png"));
+                fenetre[sizeX-1][j].setIcon(loadIcon("/assets/void.png"));
             }
         }
 
 
         //show "sc:score"
-        fenetre[8][7].setIcon(loadIcon("src/main/resources/assets/score_end_s.png"));
-        fenetre[8][8].setIcon(loadIcon("src/main/resources/assets/score_end_c.png"));
-        fenetre[8][9].setIcon(loadIcon("src/main/resources/assets/score_end_separator.png"));
+        fenetre[8][7].setIcon(loadIcon("/assets/score_end_s.png"));
+        fenetre[8][8].setIcon(loadIcon("/assets/score_end_c.png"));
+        fenetre[8][9].setIcon(loadIcon("/assets/score_end_separator.png"));
 
         //calculate to show the score
         int score = env.getScore();
 
         for(int i=10; i<13;i++){
             int numberToShow = (int) (score/Math.pow(10,i));
-            fenetre[8][i].setIcon(loadIcon("src/main/resources/assets/"+numberToShow+".png"));
+            fenetre[8][i].setIcon(loadIcon("/assets/"+numberToShow+".png"));
             score -= numberToShow*Math.pow(10,i);
         }
 
         //show "enter: again"
-        fenetre[9][7].setIcon(loadIcon("src/main/resources/assets/enter.png"));
-        fenetre[9][8].setIcon(loadIcon("src/main/resources/assets/commas.png"));
-        fenetre[9][9].setIcon(loadIcon("src/main/resources/assets/again_a.png"));
-        fenetre[9][10].setIcon(loadIcon("src/main/resources/assets/again_g.png"));
-        fenetre[9][11].setIcon(loadIcon("src/main/resources/assets/again_a.png"));
-        fenetre[9][12].setIcon(loadIcon("src/main/resources/assets/quit_i.png"));
-        fenetre[9][13].setIcon(loadIcon("src/main/resources/assets/again_n.png"));
+        fenetre[9][7].setIcon(loadIcon("/assets/enter.png"));
+        fenetre[9][8].setIcon(loadIcon("/assets/commas.png"));
+        fenetre[9][9].setIcon(loadIcon("/assets/again_a.png"));
+        fenetre[9][10].setIcon(loadIcon("/assets/again_g.png"));
+        fenetre[9][11].setIcon(loadIcon("/assets/again_a.png"));
+        fenetre[9][12].setIcon(loadIcon("/assets/quit_i.png"));
+        fenetre[9][13].setIcon(loadIcon("/assets/again_n.png"));
 
         //show "esc: quit"
-        fenetre[10][7].setIcon(loadIcon("src/main/resources/assets/escape.png"));
-        fenetre[10][8].setIcon(loadIcon("src/main/resources/assets/commas.png"));
-        fenetre[10][9].setIcon(loadIcon("src/main/resources/assets/quit_q.png"));
-        fenetre[10][10].setIcon(loadIcon("src/main/resources/assets/quit_u.png"));
-        fenetre[10][11].setIcon(loadIcon("src/main/resources/assets/quit_i.png"));
-        fenetre[10][12].setIcon(loadIcon("src/main/resources/assets/start_t.png"));
+        fenetre[10][7].setIcon(loadIcon("/assets/escape.png"));
+        fenetre[10][8].setIcon(loadIcon("/assets/commas.png"));
+        fenetre[10][9].setIcon(loadIcon("/assets/quit_q.png"));
+        fenetre[10][10].setIcon(loadIcon("/assets/quit_u.png"));
+        fenetre[10][11].setIcon(loadIcon("/assets/quit_i.png"));
+        fenetre[10][12].setIcon(loadIcon("/assets/start_t.png"));
     }
 
     private void loadStartingScreen() {
         for(int i=0;i<sizeX;i++){
             for(int j=0;j<sizeY; j++){
-                fenetre[0][j].setIcon(loadIcon("src/main/resources/assets/void.png"));
-                fenetre[1][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
+                fenetre[0][j].setIcon(loadIcon("/assets/void.png"));
+                fenetre[1][j].setIcon(loadIcon("/assets/wall.png"));
                 if(!(((j > 6) && (j < 13)) && (i == 8)))
-                        fenetre[i][j].setIcon(loadIcon("src/main/resources/assets/void.png"));
+                        fenetre[i][j].setIcon(loadIcon("/assets/void.png"));
                 if(j == 2)
-                    fenetre[i][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
+                    fenetre[i][j].setIcon(loadIcon("/assets/wall.png"));
                 if(j == sizeY - 3)
-                    fenetre[i][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
-                fenetre[sizeX-2][j].setIcon(loadIcon("src/main/resources/assets/wall.png"));
-                fenetre[sizeX-1][j].setIcon(loadIcon("src/main/resources/assets/void.png"));
+                    fenetre[i][j].setIcon(loadIcon("/assets/wall.png"));
+                fenetre[sizeX-2][j].setIcon(loadIcon("/assets/wall.png"));
+                fenetre[sizeX-1][j].setIcon(loadIcon("/assets/void.png"));
             }
         }
-        fenetre[8][7].setIcon(loadIcon("src/main/resources/assets/enter.png"));
-        fenetre[8][8].setIcon(loadIcon("src/main/resources/assets/commas.png"));
-        fenetre[8][9].setIcon(loadIcon("src/main/resources/assets/start_s.png"));
-        fenetre[8][10].setIcon(loadIcon("src/main/resources/assets/start_t.png"));
-        fenetre[8][11].setIcon(loadIcon("src/main/resources/assets/start_a.png"));
-        fenetre[8][12].setIcon(loadIcon("src/main/resources/assets/start_r.png"));
-        fenetre[8][13].setIcon(loadIcon("src/main/resources/assets/start_t.png"));
+        fenetre[8][7].setIcon(loadIcon("/assets/enter.png"));
+        fenetre[8][8].setIcon(loadIcon("/assets/commas.png"));
+        fenetre[8][9].setIcon(loadIcon("/assets/start_s.png"));
+        fenetre[8][10].setIcon(loadIcon("/assets/start_t.png"));
+        fenetre[8][11].setIcon(loadIcon("/assets/start_a.png"));
+        fenetre[8][12].setIcon(loadIcon("/assets/start_r.png"));
+        fenetre[8][13].setIcon(loadIcon("/assets/start_t.png"));
 
     }
 
