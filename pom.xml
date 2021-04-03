@@ -24,7 +24,7 @@
         <dependency>
             <groupId>com.github.Shamzamg</groupId>
             <artifactId>Gyromite</artifactId>
-            <version>Tag</version>
+            <version>master-SNAPSHOT</version>
         </dependency>
 
         <dependency>
