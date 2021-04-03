@@ -22,6 +22,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.github.Shamzamg</groupId>
+            <artifactId>Gyromite</artifactId>
+            <version>Tag</version>
+        </dependency>
+
+        <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>3.2.2</version>
