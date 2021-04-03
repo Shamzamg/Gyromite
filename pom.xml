@@ -13,24 +13,25 @@
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-
     <dependencies>
-        <dependency>
-            <groupId>com.github.Shamzamg</groupId>
-            <artifactId>Gyromite</artifactId>
-            <version>master-SNAPSHOT</version>
-        </dependency>
-
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>3.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-install-plugin</artifactId>
+            <version>2.4</version>
+            <type>maven-plugin</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.7</version>
+            <type>maven-plugin</type>
         </dependency>
     </dependencies>
 
@@ -38,37 +39,29 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.1.1</version>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
                             <mainClass>Main</mainClass>
-                        </configuration>
-                    </execution>
-                </executions>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
+                <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <doclet>info.leadinglight.umljavadoclet.UmlJavaDoclet</doclet>
-                    <docletArtifact>
-                        <groupId>com.github.gboersma</groupId>
-                        <artifactId>uml-java-doclet</artifactId>
-                        <version>1.1</version>
-                    </docletArtifact>
-                    <useStandardDocletOptions>true</useStandardDocletOptions>
-                    <additionalOptions>
-                        <!-- Specify each diagram option here as an additionOption tag. -->
-                    </additionalOptions>
+                    <archive>
+                        <manifest>
+                            <mainClass>Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>

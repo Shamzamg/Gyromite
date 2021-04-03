@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
 
@@ -58,11 +59,18 @@ public class Environment {
         this.camera = new Camera(this, levelDimensions, size);
     }
 
-    private Point getLevelDimensions(int levelIndex) {
+    private Point getLevelDimensions(int levelIndex){
 
         System.out.println("Current get level dimension: " + levelIndex);
 
-        File level = new File("src/main/resources/maps/level"+levelIndex+".txt");
+        ClassLoader classLoader = getClass().getClassLoader();
+
+        File level = null;
+        try {
+            level = new File(getClass().getResource("/maps/level"+levelIndex+".txt").toURI());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
 
         int levelWidth = 0;
         int levelHeight = 0;
@@ -143,7 +151,12 @@ public class Environment {
 
     public void loadLevel(int levelIndex){
 
-        File level = new File("src/main/resources/maps/level"+levelIndex+".txt");
+        File level = null;
+        try {
+            level = new File(getClass().getResource("/maps/level"+levelIndex+".txt").toURI());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
 
         DirectionsControl.resetInstance();
 
@@ -301,12 +314,17 @@ public class Environment {
     private void loadNextLevel(int nextlevel){
 
         //check if there is a next level, either way the game is finished
-        File level = new File("src/main/resources/maps/level"+nextlevel+".txt");
-
-        if(!level.exists()) {
-            setGameState(GameState.FINISH);
-            return;
+        File level = null;
+        try {
+            if(getClass().getResource("/maps/level"+nextlevel+".txt") == null){
+                setGameState(GameState.FINISH);
+                return;
+            }
+            level = new File(getClass().getResource("/maps/level"+nextlevel+".txt").toURI());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
         }
+
 
         //if there is a next level
 
