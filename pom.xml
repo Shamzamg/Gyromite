@@ -13,6 +13,13 @@
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>commons-collections</groupId>
@@ -39,16 +46,35 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>Main</mainClass>
-                        </manifest>
-                    </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+
+                    <archive>
+
+                        <index>true</index>
+
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>Main</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <mode>development</mode>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
             </plugin>
 
@@ -64,6 +90,25 @@
                     </archive>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <doclet>info.leadinglight.umljavadoclet.UmlJavaDoclet</doclet>
+                    <docletArtifact>
+                        <groupId>com.github.gboersma</groupId>
+                        <artifactId>uml-java-doclet</artifactId>
+                        <version>1.1</version>
+                    </docletArtifact>
+                    <useStandardDocletOptions>true</useStandardDocletOptions>
+                    <additionalOptions>
+                        <!-- Specify each diagram option here as an additionOption tag. -->
+                    </additionalOptions>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

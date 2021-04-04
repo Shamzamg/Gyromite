@@ -5,15 +5,96 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7ce38b4-3a8e-4bf5-a9ab-9c4180799cb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/AssetByParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/AssetByParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Gyromite-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Gyromite-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/AssetByParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/AssetByParam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Gyromite-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Column.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/DynamicEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Dynamite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Professor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Rope.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Smick.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/StaticEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Void.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Wall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/Camera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/DirectionsControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/DirectionsControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/Gravity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/MovingOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/AssetByParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/GameState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Param.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/SizeByLevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/again_a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/again_g.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/again_n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/column_body_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/column_body_orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/column_bottom_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/column_bottom_orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/column_head_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/column_head_orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/commas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/dynamite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/enter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/escape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/header_brick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/pacman.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/professor_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/professor_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/quit_i.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/quit_q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/quit_u.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/rope.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/score_c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/score_end_c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/score_end_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/score_end_separator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/score_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/score_separator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/start_a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/start_r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/start_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/start_t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/time_e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/time_i.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/time_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/time_t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/void.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/wall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maps/level1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maps/level2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maps/level3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
