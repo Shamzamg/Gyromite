@@ -63,6 +63,9 @@ public class Model extends Observable implements Runnable{
             Direction columnDirection = null;
             Type columnType = null;
 
+            //move all the Smicks
+            env.moveSmicks(pause);
+
             for (MovingOperator m : lstMovements) {
                 //if something moved
                 if (m.realizeMovement()){

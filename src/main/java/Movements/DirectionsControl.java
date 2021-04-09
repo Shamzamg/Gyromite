@@ -76,6 +76,8 @@ public class DirectionsControl extends MovingOperator{
                                     if(e.moveDirection(Direction.UP)){
                                         Entity temp = e.lookDirection(Direction.DOWN); //temporary void above the column bottom
                                         Entity eBas = temp.lookDirection(Direction.DOWN); //void looking for the column above
+
+                                        //move every part of the column
                                         while((eBas instanceof Column) && ((Column) eBas).moveDirection(Direction.UP)){
                                             temp = eBas.lookDirection(Direction.DOWN);
                                             eBas = temp.lookDirection(Direction.DOWN);

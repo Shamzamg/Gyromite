@@ -29,6 +29,7 @@ public class AssetByParam {
     private ImageIcon icoDynamite;
     private ImageIcon icoWall;
     private ImageIcon icoRope;
+    private ImageIcon icoSmick;
 
     public AssetByParam(){
         loadIcons();
@@ -46,12 +47,18 @@ public class AssetByParam {
         this.assetByParam.put(Type.WALL, null, icoWall);
         this.assetByParam.put(Type.ROPE, null, icoRope);
         this.assetByParam.put(Type.DYNAMITE, null, icoDynamite);
+        this.assetByParam.put(Type.SMICK, null, icoSmick);
+        this.assetByParam.put(Type.SMICK, Direction.LEFT, icoSmick);
+        this.assetByParam.put(Type.SMICK, Direction.RIGHT, icoSmick);
+        this.assetByParam.put(Type.SMICK, Direction.UP, icoSmick);
+        this.assetByParam.put(Type.SMICK, Direction.DOWN, icoSmick);
     }
 
     private void loadIcons(){
         icoProfessorRight = loadIcon("/assets/professor_right.png");
         icoProfessorLeft = loadIcon("/assets/professor_left.png");
         icoRope = loadIcon("/assets/rope.png");
+        icoSmick = loadIcon("/assets/smick.png");
         icoWall = loadIcon("/assets/wall.png");
         icoVoid = loadIcon("/assets/void.png");
         icoDynamite = loadIcon("/assets/dynamite.png");

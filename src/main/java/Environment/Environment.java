@@ -14,6 +14,7 @@ import java.awt.*;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Environment {
@@ -25,8 +26,10 @@ public class Environment {
     private Professor professor;
 
     private HashMap<Entity, Point> hashMap = new HashMap<Entity, Point>(); // allows to get position by entity
+
     private Entity [][] map; //allows to get an entity by its coordinates
     private Entity [][] bufferMap;
+    private ArrayList<Smick> smickMap = new ArrayList<Smick>(); //array of all the smicks
 
     private Point levelDimensions;
     private Camera camera;
@@ -89,7 +92,7 @@ public class Environment {
         for(int i=0;i<levelDimensions.x;i++){
             for(int j=0;j<levelDimensions.y;j++){
                 //tout ce qui est suceptible de changer à l'écran
-                if(!(map[i][j] instanceof DynamicEntity || map[i][j] instanceof Dynamite || map[i][j] instanceof Column))
+                if(!(map[i][j] instanceof DynamicEntity || map[i][j] instanceof Dynamite))
                     bufferMap[i][j] = map[i][j];
                 else bufferMap[i][j] = new Void(this);
             }
@@ -99,6 +102,30 @@ public class Environment {
     public void resetCmptDepl() {
         cmptDeplH.clear();
         cmptDeplV.clear();
+    }
+
+    public void moveSmick(Smick s){
+        moveEntity(s, s.getMovementDirection());
+    }
+
+    public void moveSmicks(long pause){
+
+        for(Smick s : smickMap){
+            if(s.getMovementTime() <= 0){
+                s.resetMovement();
+            }
+
+            //duration of movement in a same direction
+            s.setMovementTime(s.getMovementTime() - pause);
+            s.reduceSpeed();
+
+            //regulate the speed
+            if(s.getSpeed() == 0){
+                moveSmick(s);
+                s.resetSpeed();
+            }
+        }
+
     }
 
     public void start(long _pause) {
@@ -181,6 +208,12 @@ public class Environment {
                             this.hashMap.put(this.map[i][j], new Point(i,j));
                             this.nbDynamites++;
                             break;
+                        case "S":
+                            this.map[i][j] = new Smick(this);
+                            this.hashMap.put(this.map[i][j], new Point(i,j));
+                            smickMap.add((Smick) this.map[i][j]);
+                            DirectionsControl.getInstance().addDynamicEntity((DynamicEntity) map[i][j]);
+                            break;
                         case "P":
                             this.map[i][j] = new Professor(this);
                             this.hashMap.put(this.map[i][j], new Point(i,j));
@@ -198,6 +231,8 @@ public class Environment {
             else gravity.resetMovingOperator();
 
             gravity.addDynamicEntity(professor);
+
+            for(Smick s : smickMap) gravity.addDynamicEntity(s);
 
             model.add(gravity);
 
@@ -359,6 +394,7 @@ public class Environment {
                     if(map[target.x][target.y] instanceof Professor){
                         setGameState(GameState.FINISH);
                     }
+
                     //l'endroit visé devient l'entite que l'on deplace
                     map[target.x][target.y] = e;
 

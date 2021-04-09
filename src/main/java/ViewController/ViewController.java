@@ -124,6 +124,8 @@ public class ViewController extends JFrame implements Observer {
 
         setLayout(new GridLayout(sizeX, sizeY));
 
+        setResizable(false);
+
         for(int i=0;i<sizeX;i++){
             for(int j=0;j<sizeY;j++){
                 fenetre[i][j] = new JLabel();
