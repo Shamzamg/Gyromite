@@ -63,9 +63,6 @@ public class Model extends Observable implements Runnable{
             Direction columnDirection = null;
             Type columnType = null;
 
-            //move all the Smicks
-            env.moveSmicks(pause);
-
             for (MovingOperator m : lstMovements) {
                 //if something moved
                 if (m.realizeMovement()){
@@ -97,6 +94,9 @@ public class Model extends Observable implements Runnable{
             try {
                 //if we're playing, we decrease the timer at each timeloop
                 if(env.getGameState() == GameState.PLAY){
+                    //move all the Smicks
+                    env.moveSmicks(pause);
+
                     if(env.getTimer() <= 0){
                         env.switchGameState();
                     }

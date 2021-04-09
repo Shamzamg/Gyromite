@@ -13,5 +13,6 @@ public abstract class MovingOperator {
     public abstract Type getType();
     public abstract Direction getCurrentDirection();
     public void addDynamicEntity(DynamicEntity de) {lstDynamicEntities.add(de);};
+    public void removeDynamicEntity(DynamicEntity de) {lstDynamicEntities.remove(de);};
     public void resetMovingOperator(){lstDynamicEntities = new ArrayList<DynamicEntity>();}
 }

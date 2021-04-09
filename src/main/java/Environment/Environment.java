@@ -16,6 +16,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Environment {
 
@@ -111,12 +113,7 @@ public class Environment {
     public void moveSmicks(long pause){
 
         for(Smick s : smickMap){
-            if(s.getMovementTime() <= 0){
-                s.resetMovement();
-            }
 
-            //duration of movement in a same direction
-            s.setMovementTime(s.getMovementTime() - pause);
             s.reduceSpeed();
 
             //regulate the speed
@@ -305,7 +302,7 @@ public class Environment {
             }
         }
 
-        if(ret){
+        if(ret || e instanceof Smick || map[target.x][target.y] instanceof Dynamite){
             //here to change the lookingDirection (the sprite) of the moving entity
             ((DynamicEntity) e).setLookingDirection(d);
             moveEntity(current,target, e, d);
@@ -324,6 +321,7 @@ public class Environment {
         professor = null;
 
         hashMap = new HashMap<Entity, Point>();
+        smickMap = new ArrayList<Smick>();
         map = null;
         bufferMap = null;
 
@@ -368,6 +366,151 @@ public class Environment {
     private void moveEntity(Point current, Point target, Entity e, Direction d){
         firstLoaded = false;
 
+        if(map[current.x][current.y] instanceof Smick){
+
+            //if it is going against a wall
+            if(map[target.x][target.y].isSupport()){
+
+                //changes the moving direction
+                ((Smick) map[current.x][current.y]).resetDirection();
+
+                Point newTarget = calculateTargetPoint(current, ((Smick) map[current.x][current.y]).getMovementDirection());
+                map[current.x][current.y] = bufferMap[current.x][current.y];
+
+                map[newTarget.x][newTarget.y] = e;
+
+                //on update cela sur la hashMap
+                hashMap.put(map[current.x][current.y], current);
+                hashMap.put(e, newTarget);
+                return;
+            }
+
+            //if it is going against the Professor
+            if(map[target.x][target.y] instanceof Professor){
+                setGameState(GameState.FINISH);
+                return;
+            }
+
+            //if it can climb a rope
+            //let's say there is a 50% chance that it will climb the rope
+            Point above = calculateTargetPoint(current, Direction.UP);
+            if((map[above.x][above.y] instanceof Rope) && !(d == Direction.UP) && !((Smick) map[current.x][current.y]).hasStartedClimbing()){
+                Random rd = new Random(); // creating Random object
+                boolean rand = rd.nextBoolean();
+
+                if(rand){
+                    ((Smick) map[current.x][current.y]).startClimbing();
+                    ((Smick) map[current.x][current.y]).setMovementDirection(Direction.UP);
+
+                    Point newTarget = calculateTargetPoint(current, ((Smick) map[current.x][current.y]).getMovementDirection());
+                    map[current.x][current.y] = bufferMap[current.x][current.y];
+
+                    map[newTarget.x][newTarget.y] = e;
+
+                    //on update cela sur la hashMap
+                    hashMap.put(map[current.x][current.y], current);
+                    hashMap.put(e, newTarget);
+                    return;
+                }
+            }
+
+            Point below = calculateTargetPoint(current, Direction.DOWN);
+            if((map[below.x][below.y] instanceof Rope) && !(d == Direction.DOWN) && !((Smick) map[current.x][current.y]).hasStartedClimbing()){
+                Random rd = new Random(); // creating Random object
+                boolean rand = rd.nextBoolean();
+
+                if(rand){
+                    Point newTarget = calculateTargetPoint(current, ((Smick) map[current.x][current.y]).getMovementDirection());
+                    map[current.x][current.y] = bufferMap[current.x][current.y];
+
+                    map[newTarget.x][newTarget.y] = e;
+
+                    //on update cela sur la hashMap
+                    hashMap.put(map[current.x][current.y], current);
+                    hashMap.put(e, newTarget);
+                    return;
+                }
+            }
+
+            //if it is climbing up or down
+            Point right = calculateTargetPoint(current, Direction.RIGHT);
+            Point rightBelow = calculateTargetPoint(right, Direction.DOWN);
+            Point left = calculateTargetPoint(current, Direction.LEFT);
+            Point leftBelow = calculateTargetPoint(left, Direction.DOWN);
+
+            if(((d == Direction.DOWN) || (d == Direction.UP)) && ((Smick) map[current.x][current.y]).hasStartedClimbing()){
+                //stop climbing
+                if(map[rightBelow.x][rightBelow.y] instanceof Wall){
+                    ((Smick) map[current.x][current.y]).stopClimbing();
+                    ((Smick) map[current.x][current.y]).setMovementDirection(Direction.RIGHT);
+
+                    Point newTarget = calculateTargetPoint(current, ((Smick) map[current.x][current.y]).getMovementDirection());
+                    map[current.x][current.y] = bufferMap[current.x][current.y];
+                    map[newTarget.x][newTarget.y] = e;
+
+                    //on update cela sur la hashMap
+                    hashMap.put(map[current.x][current.y], current);
+                    hashMap.put(e, newTarget);
+                    return;
+                }
+
+                if(map[leftBelow.x][leftBelow.y] instanceof Wall){
+                    ((Smick) map[current.x][current.y]).stopClimbing();
+                    ((Smick) map[current.x][current.y]).setMovementDirection(Direction.LEFT);
+
+                    Point newTarget = calculateTargetPoint(current, ((Smick) map[current.x][current.y]).getMovementDirection());
+                    map[current.x][current.y] = bufferMap[current.x][current.y];
+                    map[newTarget.x][newTarget.y] = e;
+
+                    //on update cela sur la hashMap
+                    hashMap.put(map[current.x][current.y], current);
+                    hashMap.put(e, newTarget);
+                    return;
+                }
+
+                if(map[target.x][target.y] instanceof Rope){
+                    map[current.x][current.y] = bufferMap[current.x][current.y];
+                    map[target.x][target.y] = e;
+
+                    //we update it on hashMap
+                    hashMap.put(map[current.x][current.y], current);
+                    hashMap.put(e, target);
+                    return;
+                }
+                //either way there is no reason that it keeps trying to move up or down
+                ((Smick) map[current.x][current.y]).resetDirection();
+                return;
+            }
+
+            //if it is about to fall
+            Point nextBelow = calculateTargetPoint(target, Direction.DOWN);
+
+            if(!(map[nextBelow.x][nextBelow.y].isSupport()) && map[below.x][below.y].isSupport()){
+                if(map[target.x][target.y].isClimbable()){
+                    Random rd = new Random(); // creating Random object
+                    boolean rand = rd.nextBoolean();
+
+                    if(rand){
+                        map[current.x][current.y] = bufferMap[current.x][current.y];
+                        map[target.x][target.y] = e;
+
+                        //we update it on hashMap
+                        hashMap.put(map[current.x][current.y], current);
+                        hashMap.put(e, target);
+
+                        ((Smick) map[target.x][target.y]).startClimbing();
+                        ((Smick) map[target.x][target.y]).setMovementDirection(Direction.DOWN);
+                        return;
+                    }
+                }
+                //changes the moving direction
+                ((Smick) map[current.x][current.y]).resetDirection();
+                return;
+            }
+
+
+        }
+
         //if the professor is about to pick-up a dynamite
         if(map[current.x][current.y] instanceof Professor){
             if(map[target.x][target.y] instanceof Dynamite){
@@ -393,12 +536,25 @@ public class Environment {
 
                     if(map[target.x][target.y] instanceof Professor){
                         setGameState(GameState.FINISH);
+                        return;
                     }
 
-                    //l'endroit visé devient l'entite que l'on deplace
+                    if(map[target.x][target.y] instanceof Smick){
+                        //we remove it from the gravity
+                        gravity.removeDynamicEntity((DynamicEntity) map[target.x][target.y]);
+                        //we remove the smick from the smickMap
+                        smickMap.remove(map[target.x][target.y]);
+                        //we remove the smick from the hashMap
+                        hashMap.remove(map[target.x][target.y]);
+                        //we remove the smick from the map
+                        map[target.x][target.y] = new Void(this);
+
+                    }
+
+                    //moving target becomes the moving entity
                     map[target.x][target.y] = e;
 
-                    //on update cela sur la hashMap
+                    //we update it on hashMap
                     hashMap.put(map[current.x][current.y], current);
                     hashMap.put(e, target);
                     return;
@@ -407,11 +563,11 @@ public class Environment {
 
                 map[current.x][current.y] = bufferMap[current.x][current.y];
                 Entity next = map[target.x][target.y];
-                //l'endroit visé devient l'entite que l'on deplace
+                //the target becomes the moving entity
                 map[target.x][target.y] = e;
                 map[nextTarget.x][nextTarget.y] = next;
 
-                //on update cela sur la hashMap
+                //we update it on  hashMap
                 hashMap.put(map[current.x][current.y], current);
                 hashMap.put(e, target);
                 hashMap.put(next, nextTarget);
@@ -419,14 +575,14 @@ public class Environment {
             }
         }
 
-        //on change l'endroit actuel par sa valeur initiale
+        //we chance the current place by its initial value
         map[current.x][current.y] = bufferMap[current.x][current.y];
 
         if(!firstLoaded){
-            //l'endroit visé devient l'entite que l'on deplace
+            //the target becomes the moving entity
             map[target.x][target.y] = e;
 
-            //on update cela sur la hashMap
+            //we update it on  hashMap
             hashMap.put(map[current.x][current.y], current);
             hashMap.put(e, target);
         }

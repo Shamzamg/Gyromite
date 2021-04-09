@@ -1,6 +1,8 @@
 package Entities;
 
 import Entities.DynamicEntity;
+
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import Environment.Environment;
 import Utils.Direction;
@@ -10,44 +12,67 @@ public class Smick extends DynamicEntity {
 
     private double movementTime = -1;
     private int initialSpeed = 5;
+    boolean isClimbing = false;
     //every 3 ticks it will move
     private int speed = 5;
-    Direction movementDirection;
+    Direction movementDirection = Direction.RIGHT;
+
+    public void startClimbing(){ isClimbing = true; }
+
+    public boolean hasStartedClimbing(){ return isClimbing; }
+
+    public void stopClimbing(){ isClimbing = false; }
 
     public void resetSpeed(){
         speed = initialSpeed;
     }
 
-    public void resetMovementTime(){
-        int min = 2000;
-        int max = 8000;
-        movementTime = ThreadLocalRandom.current().nextInt(min, max + 1);
-    }
-
     public void resetDirection(){
-        int rand = ThreadLocalRandom.current().nextInt(0, 1 + 1);
+        switch(movementDirection){
+            case LEFT:
+                movementDirection = Direction.RIGHT;
+                break;
+            case RIGHT:
+                movementDirection = Direction.LEFT;
+                break;
+            case UP:
+                if(!isClimbing){
+                    Random rd = new Random(); // creating Random object
+                    boolean rand = rd.nextBoolean();
 
-        if(rand > 0){
-            lookingDirection = Direction.LEFT;
-            movementDirection = Direction.LEFT;
+                    if(rand) movementDirection = Direction.RIGHT;
+
+                    else movementDirection = Direction.LEFT;
+                    break;
+                }
+                movementDirection = Direction.DOWN;
+                break;
+
+            case DOWN:
+                if(!isClimbing){
+                    Random rd = new Random(); // creating Random object
+                    boolean rand = rd.nextBoolean();
+
+                    if(rand) movementDirection = Direction.RIGHT;
+
+                    else movementDirection = Direction.LEFT;
+                    break;
+                }
+                movementDirection = Direction.UP;
+                break;
         }
-
-        else{
-            lookingDirection = Direction.RIGHT;
-            movementDirection = Direction.RIGHT;
-        }
-
     }
 
     public void reduceSpeed(){ speed--; }
 
-    public void resetMovement(){
-        resetMovementTime();
-        resetDirection();
-    }
-
     public Smick(Environment _env) {
         super(_env);
+        Random rd = new Random(); // creating Random object
+        boolean rand = rd.nextBoolean();
+
+        if(rand) movementDirection = Direction.RIGHT;
+
+        else movementDirection = Direction.LEFT;
     }
 
     @Override
@@ -75,6 +100,11 @@ public class Smick extends DynamicEntity {
     public void setMovementTime(double m) { movementTime = m;}
 
     public Direction getMovementDirection(){ return movementDirection; }
+
+    public void setMovementDirection(Direction md){
+        movementDirection = md;
+        setLookingDirection(md);
+    }
 
     public int getSpeed() { return speed; }
 }

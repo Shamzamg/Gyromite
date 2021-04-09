@@ -14,7 +14,7 @@ public class Dynamite extends StaticEntity{
 
     @Override
     public boolean isSupport() {
-        return false;
+        return true;
     }
 
     @Override
