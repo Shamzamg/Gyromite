@@ -6,16 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b7ce38b4-3a8e-4bf5-a9ab-9c4180799cb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/maps/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maps/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maps/level2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maps/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maps/level2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maps/level3.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
