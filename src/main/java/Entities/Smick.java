@@ -8,9 +8,11 @@ import Environment.Environment;
 import Utils.Direction;
 import Utils.Type;
 
+/**
+ * Smick class, used as enemies for the Professor
+ */
 public class Smick extends DynamicEntity {
 
-    private double movementTime = -1;
     private int initialSpeed = 5;
     boolean isClimbing = false;
     //every 3 ticks it will move
@@ -94,10 +96,6 @@ public class Smick extends DynamicEntity {
     public Type getType() {
         return Type.SMICK;
     }
-
-    public double getMovementTime(){ return movementTime; }
-
-    public void setMovementTime(double m) { movementTime = m;}
 
     public Direction getMovementDirection(){ return movementDirection; }
 

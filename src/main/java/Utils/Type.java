@@ -1,5 +1,8 @@
 package Utils;
 
+/**
+ * All the possible types of entities in the game
+ */
 public enum Type {
     DYNAMITE,
     BLUE_COLUMN,

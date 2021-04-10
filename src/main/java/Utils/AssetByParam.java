@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+/**
+ * Class used by the ViewController to render assets easier
+ */
 public class AssetByParam {
 
     private MultiKeyMap assetByParam = new MultiKeyMap();

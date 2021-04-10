@@ -14,7 +14,9 @@ import java.util.HashMap;
 import java.util.Observable;
 import static java.lang.Thread.*;
 
-
+/**
+ * Model class has the main loop, do things every loop turn
+ */
 public class Model extends Observable implements Runnable{
 
     Environment env;

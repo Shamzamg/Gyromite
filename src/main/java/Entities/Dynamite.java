@@ -3,6 +3,9 @@ package Entities;
 import Environment.Environment;
 import Utils.Type;
 
+/**
+ * Dynamite class used as a collectible for the professor
+ */
 public class Dynamite extends StaticEntity{
 
     public Dynamite(Environment _env) {

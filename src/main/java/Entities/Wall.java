@@ -3,6 +3,9 @@ package Entities;
 import Environment.Environment;
 import Utils.Type;
 
+/**
+ * Wall class used all around the map and also as a floor
+ */
 public class Wall extends StaticEntity{
 
     public Wall(Environment _env) {

@@ -2,8 +2,8 @@ import Environment.Environment;
 import ViewController.ViewController;
 
 /**
- *
- * @author shams
+ * @author Shamsdine ZIANI
+ * Main class of the game
  */
 public class Main {
 

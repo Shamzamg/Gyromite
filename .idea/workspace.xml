@@ -6,12 +6,59 @@
   <component name="ChangeListManager">
     <list default="true" id="b7ce38b4-3a8e-4bf5-a9ab-9c4180799cb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Column.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/DynamicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/DynamicEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Dynamite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Dynamite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Rope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Rope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Smick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Smick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/StaticEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Void.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Void.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Wall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/DirectionsControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/DirectionsControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/Gravity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/Gravity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/MovingOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/MovingOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/AssetByParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/AssetByParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Param.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/SizeByLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maps/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maps/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maps/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maps/level2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maps/level3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Column.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Column.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/DynamicEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/DynamicEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Dynamite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Dynamite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Professor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Professor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Rope.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Rope.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Smick$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Smick$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Smick.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Smick.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/StaticEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/StaticEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Void.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Void.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Wall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/Camera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/DirectionsControl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/DirectionsControl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/DirectionsControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/DirectionsControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/Gravity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/Gravity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Movements/MovingOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/MovingOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/AssetByParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/AssetByParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/Direction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Param.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/SizeByLevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewController/ViewController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewController/ViewController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +74,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1qf0aHIXVUjHlMAMRZG05ionziw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

@@ -27,8 +27,7 @@ import javax.swing.*;
 
 
 /**
- *
- * @author shams
+ * Renders everything from the Environment's Entity map
  */
 public class ViewController extends JFrame implements Observer {
 

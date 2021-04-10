@@ -7,6 +7,9 @@ import java.awt.*;
 
 import static java.lang.Math.floor;
 
+/**
+ * Camera class used to follow Professor movements
+ */
 public class Camera {
 
     int renderDistance;

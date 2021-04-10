@@ -6,6 +6,9 @@ import Utils.Type;
 
 import java.awt.*;
 
+/**
+ * Professor class, used only once, can be controlled by the player
+ */
 public class Professor extends DynamicEntity {
 
     private Point position;

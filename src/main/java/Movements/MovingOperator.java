@@ -7,6 +7,9 @@ import Utils.Type;
 import javax.management.DynamicMBean;
 import java.util.ArrayList;
 
+/**
+ * MovingOperator is a mother class for all the classes that move entities
+ */
 public abstract class MovingOperator {
     protected ArrayList<DynamicEntity> lstDynamicEntities = new ArrayList<DynamicEntity>();
     public abstract boolean realizeMovement();

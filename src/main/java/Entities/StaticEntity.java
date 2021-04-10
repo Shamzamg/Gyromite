@@ -3,6 +3,9 @@ package Entities;
 import Environment.Environment;
 import Utils.Type;
 
+/**
+ * StaticEntity class used for every static entity
+ */
 public abstract class StaticEntity extends Entity{
     public StaticEntity(Environment _env) {
         super(_env);

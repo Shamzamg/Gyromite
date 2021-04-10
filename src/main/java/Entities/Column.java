@@ -3,6 +3,9 @@ package Entities;
 import Environment.Environment;
 import Utils.Type;
 
+/**
+ * Column class, used for both blue and orange columns
+ */
 public class Column extends DynamicEntity{
 
     Type type = null;

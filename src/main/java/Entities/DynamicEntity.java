@@ -6,6 +6,9 @@ import Utils.Type;
 
 import java.awt.*;
 
+/**
+ * DynamicEntity class used for every entity that is able to move
+ */
 public abstract class DynamicEntity extends Entity{
 
     protected Direction lookingDirection = null;

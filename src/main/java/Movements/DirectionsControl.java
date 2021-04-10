@@ -9,6 +9,9 @@ import Utils.Type;
 
 import java.util.ArrayList;
 
+/**
+ * DirectionsControl class allow entites to move
+ */
 public class DirectionsControl extends MovingOperator{
     private Direction currentDirection;
     private Type type;

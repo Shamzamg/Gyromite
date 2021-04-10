@@ -3,6 +3,9 @@ package Entities;
 import Environment.Environment;
 import Utils.Type;
 
+/**
+ * Void class used to fill the map when there's nothing
+ */
 public class Void extends StaticEntity{
     public Void(Environment _env) {
         super(_env);

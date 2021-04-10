@@ -3,6 +3,9 @@ package Entities;
 import Environment.Environment;
 import Utils.Type;
 
+/**
+ * Rope class, climbable by both Professor and Smicks
+ */
 public class Rope extends StaticEntity{
 
     public Rope(Environment _env) {

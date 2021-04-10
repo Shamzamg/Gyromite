@@ -4,6 +4,9 @@ import Environment.Environment;
 import Utils.Direction;
 import Utils.Type;
 
+/**
+ * Entity class is the mother class of all the entities
+ */
 public abstract class Entity {
 
     protected Environment env;

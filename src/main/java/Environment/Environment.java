@@ -19,6 +19,12 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Environment class
+ * Contains every entity and counter of their movements
+ * Load levels
+ * Contains the current state of the game
+ */
 public class Environment {
 
     // count horizontal and vertical movements (1 max at each time-step)

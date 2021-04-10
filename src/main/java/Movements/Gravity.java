@@ -5,6 +5,10 @@ import Entities.Entity;
 import Utils.Direction;
 import Utils.Type;
 
+/**
+ * Gravity class is a MovingOperator that pulls entities
+ * we had applied Gravity
+ */
 public class Gravity extends MovingOperator {
 
     @Override
