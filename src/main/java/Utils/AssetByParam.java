@@ -6,7 +6,6 @@ import org.apache.commons.collections.map.MultiKeyMap;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,7 +30,8 @@ public class AssetByParam {
     private ImageIcon icoDynamite;
     private ImageIcon icoWall;
     private ImageIcon icoRope;
-    private ImageIcon icoSmick;
+    private ImageIcon icoSmickRight;
+    private ImageIcon icoSmickLeft;
 
     public AssetByParam(){
         loadIcons();
@@ -49,18 +49,19 @@ public class AssetByParam {
         this.assetByParam.put(Type.WALL, null, icoWall);
         this.assetByParam.put(Type.ROPE, null, icoRope);
         this.assetByParam.put(Type.DYNAMITE, null, icoDynamite);
-        this.assetByParam.put(Type.SMICK, null, icoSmick);
-        this.assetByParam.put(Type.SMICK, Direction.LEFT, icoSmick);
-        this.assetByParam.put(Type.SMICK, Direction.RIGHT, icoSmick);
-        this.assetByParam.put(Type.SMICK, Direction.UP, icoSmick);
-        this.assetByParam.put(Type.SMICK, Direction.DOWN, icoSmick);
+        this.assetByParam.put(Type.SMICK, null, icoSmickRight);
+        this.assetByParam.put(Type.SMICK, Direction.LEFT, icoSmickLeft);
+        this.assetByParam.put(Type.SMICK, Direction.RIGHT, icoSmickRight);
+        this.assetByParam.put(Type.SMICK, Direction.UP, icoSmickRight);
+        this.assetByParam.put(Type.SMICK, Direction.DOWN, icoSmickLeft);
     }
 
     private void loadIcons(){
         icoProfessorRight = loadIcon("/assets/professor_right.png");
         icoProfessorLeft = loadIcon("/assets/professor_left.png");
         icoRope = loadIcon("/assets/rope.png");
-        icoSmick = loadIcon("/assets/smick.png");
+        icoSmickRight = loadIcon("/assets/smick_right.png");
+        icoSmickLeft = loadIcon("/assets/smick_left.png");
         icoWall = loadIcon("/assets/wall.png");
         icoVoid = loadIcon("/assets/void.png");
         icoDynamite = loadIcon("/assets/dynamite.png");
