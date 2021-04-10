@@ -19,4 +19,4 @@ The file can then be found in the target folder.
 
 ## How to play
 
-You control the professor Hector moving with arrow keys. You can also move blue columns downwards or upwards by pressing A. Same for orange ones but with B key. You can crush Smicks and also be crushed. You need to collect all the dynamites under the given time and you will automatically be teleported to the next level once it is done. A collision with a Smick kills you.
+You control the professor Hector moving with arrow keys. You can move blue columns downwards or upwards by pressing A. Same for orange ones but with B key. You can crush Smicks and also be crushed. You need to collect all the dynamites under the given time and you will automatically be teleported to the next level once it is done. A collision with a Smick kills you.
