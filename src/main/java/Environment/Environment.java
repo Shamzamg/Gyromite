@@ -63,7 +63,7 @@ public class Environment {
 
     private Point getLevelDimensions(int levelIndex){
 
-        System.out.println("Current get level dimension: " + levelIndex);
+        System.out.println("Current level loading: " + levelIndex);
 
         int levelWidth = 0;
         int levelHeight = 0;
@@ -482,7 +482,7 @@ public class Environment {
                 return;
             }
 
-            //if it is about to fall
+            //if it is about to fall or could fall on a rope
             Point nextBelow = calculateTargetPoint(target, Direction.DOWN);
 
             if(!(map[nextBelow.x][nextBelow.y].isSupport()) && map[below.x][below.y].isSupport()){
@@ -491,6 +491,7 @@ public class Environment {
                     boolean rand = rd.nextBoolean();
 
                     if(rand){
+                        //we move it a first time in target direction
                         map[current.x][current.y] = bufferMap[current.x][current.y];
                         map[target.x][target.y] = e;
 
@@ -498,8 +499,18 @@ public class Environment {
                         hashMap.put(map[current.x][current.y], current);
                         hashMap.put(e, target);
 
-                        ((Smick) map[target.x][target.y]).startClimbing();
-                        ((Smick) map[target.x][target.y]).setMovementDirection(Direction.DOWN);
+                        //we move it a second time downsideAAAAAAAAAA
+                        Point nextCurrent = target;
+                        Point nextTarget = calculateTargetPoint(nextCurrent, Direction.DOWN);
+                        map[nextCurrent.x][nextCurrent.y] = bufferMap[nextCurrent.x][nextCurrent.y];
+                        map[nextTarget.x][nextTarget.y] = e;
+
+                        //we update it on hashMap
+                        hashMap.put(map[nextCurrent.x][nextCurrent.y], nextCurrent);
+                        hashMap.put(e, nextTarget);
+
+                        ((Smick) map[nextTarget.x][nextTarget.y]).startClimbing();
+                        ((Smick) map[nextTarget.x][nextTarget.y]).setMovementDirection(Direction.DOWN);
                         return;
                     }
                 }
@@ -521,6 +532,11 @@ public class Environment {
                 if(nbDynamites == 0){
                     loadNextLevel(currentLevel + 1);
                 }
+            }
+
+            if(map[target.x][target.y] instanceof Smick){
+                setGameState(GameState.FINISH);
+                return;
             }
         }
 

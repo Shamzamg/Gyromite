@@ -36,8 +36,8 @@ public class ViewController extends JFrame implements Observer {
     int sizeX, sizeY;
     MultiKeyMap assetByParam;
     JLabel [][] fenetre;
-    Direction blueDirection = Direction.UP;
-    Direction orangeDirection = Direction.UP;
+    Direction blueDirection = Direction.DOWN;
+    Direction orangeDirection = Direction.DOWN;
     //used to not keep loading start and end screen
     boolean startScreen=false, endScreen=false;
 

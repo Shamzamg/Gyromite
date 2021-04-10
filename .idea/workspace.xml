@@ -6,19 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b7ce38b4-3a8e-4bf5-a9ab-9c4180799cb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Dynamite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Dynamite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Smick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Smick.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/MovingOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/MovingOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Dynamite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Dynamite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Smick.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Smick.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level3.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Environment/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Environment/Environment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Movements/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Movements/MovingOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Movements/MovingOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewController/ViewController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/maps/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maps/level1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maps/level2.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +43,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Manifest" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/maps" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/maps" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/assets" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
