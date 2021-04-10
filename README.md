@@ -15,7 +15,7 @@ Librairies should be automatically downloaded by Maven.
 
 The runnable .jar file is the one called Gyromite-1.0-SNAPSHOT-jar-with-dependencies
 
-You can generate it by using Maven 
+You can generate it by using Maven:
 
 1.clean
 
