@@ -44,7 +44,7 @@ public class DirectionsControl extends MovingOperator{
             if(currentDirection != null){
                 if(e.getType() == type){
                     //if the professor is moving
-                    if(type == Type.PROFESSOR){
+                    if(e instanceof Professor){
                         switch(currentDirection){
                             case LEFT:
                             case RIGHT:

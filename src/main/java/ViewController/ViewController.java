@@ -78,10 +78,10 @@ public class ViewController extends JFrame implements Observer {
             public void keyPressed(KeyEvent e) {
                 switch(e.getKeyCode()) {  // we check which key was pressed
                     //if it is an arrow key, we move the Professor
-                    case KeyEvent.VK_LEFT : DirectionsControl.getInstance().setCurrentDirection(Direction.LEFT, Utils.Type.PROFESSOR); break;
-                    case KeyEvent.VK_RIGHT : DirectionsControl.getInstance().setCurrentDirection(Direction.RIGHT, Utils.Type.PROFESSOR); break;
-                    case KeyEvent.VK_UP : DirectionsControl.getInstance().setCurrentDirection(Direction.UP, Utils.Type.PROFESSOR); break;
-                    case KeyEvent.VK_DOWN : DirectionsControl.getInstance().setCurrentDirection(Direction.DOWN, Utils.Type.PROFESSOR); break;
+                    case KeyEvent.VK_LEFT : DirectionsControl.getInstance().setCurrentDirection(Direction.LEFT, env.getProfessor().getType()); break;
+                    case KeyEvent.VK_RIGHT : DirectionsControl.getInstance().setCurrentDirection(Direction.RIGHT, env.getProfessor().getType()); break;
+                    case KeyEvent.VK_UP : DirectionsControl.getInstance().setCurrentDirection(Direction.UP, env.getProfessor().getType()); break;
+                    case KeyEvent.VK_DOWN : DirectionsControl.getInstance().setCurrentDirection(Direction.DOWN, env.getProfessor().getType()); break;
                     //if we press A, we move the blue columns
                     case KeyEvent.VK_A: DirectionsControl.getInstance().setCurrentDirection(switchBlueDirection(), Utils.Type.BLUE_COLUMN); break;
                     //if we press B, we move the orange columns

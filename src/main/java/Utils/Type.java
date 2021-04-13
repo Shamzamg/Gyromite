@@ -9,6 +9,8 @@ public enum Type {
     ORANGE_COLUMN,
     ROPE,
     PROFESSOR,
+    RADISHPROFESSOR,
+    RADISH,
     VOID,
     WALL,
     SMICK;

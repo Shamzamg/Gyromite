@@ -3,7 +3,6 @@
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/ViewController/ViewController.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Movements/DirectionsControl.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Entities/Wall.java
-/Users/shams/Desktop/Projet/Gyromite/src/main/java/Utils/Param.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Entities/StaticEntity.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Entities/Void.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Entities/Dynamite.java
@@ -20,5 +19,4 @@
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Entities/Column.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Entities/DynamicEntity.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Entities/Smick.java
-/Users/shams/Desktop/Projet/Gyromite/src/main/java/Utils/SizeByLevel.java
 /Users/shams/Desktop/Projet/Gyromite/src/main/java/Main.java

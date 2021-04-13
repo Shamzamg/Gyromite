@@ -13,6 +13,8 @@ public class Professor extends DynamicEntity {
 
     private Point position;
 
+    private Type type = Type.PROFESSOR;
+
     public Professor(Environment _env) {
         super(_env);
     }
@@ -33,8 +35,8 @@ public class Professor extends DynamicEntity {
     }
 
     @Override
-    public Type getType() {
-        return Type.PROFESSOR;
-    }
+    public Type getType() { return type; }
+
+    public void setType(Type t){ this.type = t; }
 
 }

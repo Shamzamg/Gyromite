@@ -45,6 +45,9 @@ public class Environment {
 
     private Model model = new Model(this);
     private int nbDynamites = 0;
+    private boolean hasRadish = false;
+    //number of movements until the Professor cannot be harmed by Smicks
+    private int invincibility = 0;
     private int currentLevel = 1;
     private int size;
     private int timer = 999;
@@ -100,7 +103,7 @@ public class Environment {
         for(int i=0;i<levelDimensions.x;i++){
             for(int j=0;j<levelDimensions.y;j++){
                 //tout ce qui est suceptible de changer à l'écran
-                if(!(map[i][j] instanceof DynamicEntity || map[i][j] instanceof Dynamite))
+                if(!(map[i][j] instanceof DynamicEntity || map[i][j] instanceof Dynamite || map[i][j] instanceof Radish))
                     bufferMap[i][j] = map[i][j];
                 else bufferMap[i][j] = new Void(this);
             }
@@ -217,6 +220,10 @@ public class Environment {
                             smickMap.add((Smick) this.map[i][j]);
                             DirectionsControl.getInstance().addDynamicEntity((DynamicEntity) map[i][j]);
                             break;
+                        case "V":
+                            this.map[i][j] = new Radish(this);
+                            this.hashMap.put(this.map[i][j], new Point(i,j));
+                            break;
                         case "P":
                             this.map[i][j] = new Professor(this);
                             this.hashMap.put(this.map[i][j], new Point(i,j));
@@ -308,7 +315,7 @@ public class Environment {
             }
         }
 
-        if(ret || e instanceof Smick || map[target.x][target.y] instanceof Dynamite){
+        if(ret || e instanceof Smick || map[target.x][target.y] instanceof Dynamite || map[target.x][target.y] instanceof Radish){
             //here to change the lookingDirection (the sprite) of the moving entity
             ((DynamicEntity) e).setLookingDirection(d);
             moveEntity(current,target, e, d);
@@ -372,6 +379,8 @@ public class Environment {
     private void moveEntity(Point current, Point target, Entity e, Direction d){
         firstLoaded = false;
 
+        if(invincibility > 0) invincibility--;
+
         if(map[current.x][current.y] instanceof Smick){
 
             //if it is going against a wall
@@ -393,8 +402,19 @@ public class Environment {
 
             //if it is going against the Professor
             if(map[target.x][target.y] instanceof Professor){
-                setGameState(GameState.FINISH);
-                return;
+
+                //if the professor doesn't has a radish
+                if((!hasRadish) || (invincibility > 0)){
+                    setGameState(GameState.FINISH);
+                    return;
+                }
+                //either way we throw his radish and change the direction of the smick
+                if(hasRadish){
+                    hasRadish = false;
+                    //we update his Type to update the assets
+                    ((Professor) this.map[target.x][target.y]).setType(Type.PROFESSOR);
+                    invincibility = 4;
+                }
             }
 
             //if it can climb a rope
@@ -541,8 +561,31 @@ public class Environment {
             }
 
             if(map[target.x][target.y] instanceof Smick){
-                setGameState(GameState.FINISH);
-                return;
+                //if the professor doesn't has a radish
+                if((!hasRadish) || (invincibility > 0)){
+                    setGameState(GameState.FINISH);
+                    return;
+                }
+                //either way we throw his radish and change the direction of the smick
+                if(hasRadish){
+                    hasRadish = false;
+                    //we update his Type to update the assets
+                    ((Professor) map[current.x][current.y]).setType(Type.PROFESSOR);
+                    invincibility = 4;
+                }
+            }
+        }
+
+        //if the professor is about to pick-up a radish
+        if(map[current.x][current.y] instanceof Professor){
+            if(map[target.x][target.y] instanceof Radish){
+                //if he already has a radish
+                if(!hasRadish){
+                    hasRadish = true;
+                    //we update his Type to update the assets
+                    ((Professor) map[current.x][current.y]).setType(Type.RADISHPROFESSOR);
+                }
+                //either way nothing happens
             }
         }
 

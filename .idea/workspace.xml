@@ -5,10 +5,126 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7ce38b4-3a8e-4bf5-a9ab-9c4180799cb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/smick_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Radish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/radish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/radish_professor_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/radish_professor_right.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Environment/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Movements/DirectionsControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Movements/DirectionsControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utils/AssetByParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/AssetByParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/smick.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/smick_right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewController/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/level2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Gyromite-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Gyromite-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Gyromite-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Gyromite-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-javadoc-plugin-stale-data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Column.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/DynamicEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Dynamite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Entity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Professor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Rope.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Smick.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/StaticEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Void.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/Wall.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Column.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/DynamicEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Dynamite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Entity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Professor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Rope.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Smick.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/StaticEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Void.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/class-use/Wall.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Entities/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Environment/Environment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Environment/class-use/Environment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Environment/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Environment/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Environment/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/Camera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/DirectionsControl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/Gravity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/Model.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/MovingOperator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/class-use/Camera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/class-use/DirectionsControl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/class-use/Gravity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/class-use/Model.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/class-use/MovingOperator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Movements/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/AssetByParam.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/Direction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/GameState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/Param.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/SizeByLevel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/Type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/class-use/AssetByParam.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/class-use/Direction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/class-use/GameState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/class-use/Param.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/class-use/SizeByLevel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/class-use/Type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/Utils/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/ViewController/ViewController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/ViewController/class-use/ViewController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/ViewController/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/ViewController/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/ViewController/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/class-use/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/type-search-index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +150,15 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1qf0aHIXVUjHlMAMRZG05ionziw" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -60,6 +179,9 @@
       <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Entities" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -105,5 +227,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

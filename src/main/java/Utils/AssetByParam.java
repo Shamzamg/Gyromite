@@ -20,6 +20,8 @@ public class AssetByParam {
     // icones affichées dans la grille
     private ImageIcon icoProfessorRight;
     private ImageIcon icoProfessorLeft;
+    private ImageIcon icoRadishProfessorRight;
+    private ImageIcon icoRadishProfessorLeft;
     private ImageIcon icoBlueColumnHead;
     private ImageIcon icoBlueColumnBody;
     private ImageIcon icoBlueColumnBottom;
@@ -29,6 +31,7 @@ public class AssetByParam {
     private ImageIcon icoVoid;
     private ImageIcon icoDynamite;
     private ImageIcon icoWall;
+    private ImageIcon icoRadish;
     private ImageIcon icoRope;
     private ImageIcon icoSmickRight;
     private ImageIcon icoSmickLeft;
@@ -39,6 +42,10 @@ public class AssetByParam {
         this.assetByParam.put(Type.PROFESSOR, Direction.DOWN, icoProfessorRight);
         this.assetByParam.put(Type.PROFESSOR, Direction.UP, icoProfessorRight);
         this.assetByParam.put(Type.PROFESSOR, Direction.LEFT, icoProfessorLeft);
+        this.assetByParam.put(Type.RADISHPROFESSOR, Direction.RIGHT, icoRadishProfessorRight);
+        this.assetByParam.put(Type.RADISHPROFESSOR, Direction.DOWN, icoRadishProfessorRight);
+        this.assetByParam.put(Type.RADISHPROFESSOR, Direction.UP, icoRadishProfessorRight);
+        this.assetByParam.put(Type.RADISHPROFESSOR, Direction.LEFT, icoRadishProfessorLeft);
         this.assetByParam.put(Type.BLUE_COLUMN, Direction.UP, icoBlueColumnBottom);
         this.assetByParam.put(Type.BLUE_COLUMN, Direction.DOWN, icoBlueColumnHead);
         this.assetByParam.put(Type.BLUE_COLUMN, null, icoBlueColumnBody);
@@ -49,6 +56,7 @@ public class AssetByParam {
         this.assetByParam.put(Type.WALL, null, icoWall);
         this.assetByParam.put(Type.ROPE, null, icoRope);
         this.assetByParam.put(Type.DYNAMITE, null, icoDynamite);
+        this.assetByParam.put(Type.RADISH, null, icoRadish);
         this.assetByParam.put(Type.SMICK, null, icoSmickRight);
         this.assetByParam.put(Type.SMICK, Direction.LEFT, icoSmickLeft);
         this.assetByParam.put(Type.SMICK, Direction.RIGHT, icoSmickRight);
@@ -59,12 +67,15 @@ public class AssetByParam {
     private void loadIcons(){
         icoProfessorRight = loadIcon("/assets/professor_right.png");
         icoProfessorLeft = loadIcon("/assets/professor_left.png");
+        icoRadishProfessorRight = loadIcon("/assets/radish_professor_right.png");
+        icoRadishProfessorLeft = loadIcon("/assets/radish_professor_left.png");
         icoRope = loadIcon("/assets/rope.png");
         icoSmickRight = loadIcon("/assets/smick_right.png");
         icoSmickLeft = loadIcon("/assets/smick_left.png");
         icoWall = loadIcon("/assets/wall.png");
         icoVoid = loadIcon("/assets/void.png");
         icoDynamite = loadIcon("/assets/dynamite.png");
+        icoRadish = loadIcon("/assets/radish.png");
         icoBlueColumnHead = loadIcon("/assets/column_head_blue.png");
         icoBlueColumnBody = loadIcon("/assets/column_body_blue.png");
         icoBlueColumnBottom = loadIcon("/assets/column_bottom_blue.png");
